@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WZ Cores e Formas</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+    function enviarWhatsApp() {
+        const nome = document.getElementById('nome').value;
+        const produto = document.getElementById('produto').value;
+        const cor = document.getElementById('cor').value;
+        const personalizacao = document.getElementById('personalizacao').value;
+        const quantidade = document.getElementById('quantidade').value;
+
+        const mensagem = `Olá, quero fazer um pedido!%0A
+Produto: ${produto}%0A
+Cor: ${cor}%0A
+Quantidade: ${quantidade}%0A
+Personalização: ${personalizacao}%0A
+Nome: ${nome}`;
+
+        window.open(`https://wa.me/5518996460668?text=${mensagem}`, '_blank');
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>WZ Cores e Formas</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Números Residenciais</a></li>
+                <li><a href="#">Letras para Fachada</a></li>
+                <li><a href="#">Placas</a></li>
+                <li><a href="#">Painéis Decorativos</a></li>
+                <li><a href="#">Acessórios</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Sua fachada com cara de marca milionária, sem você pagar caro por isso.</h2>
+            <p>Direto da fábrica para sua casa.</p>
+            <button>Ver Produtos</button>
+        </section>
+        <section class="formulario">
+            <h2>Faça seu Pedido</h2>
+            <label>Seu Nome:</label><br>
+            <input type="text" id="nome" placeholder="Seu nome"><br><br>
+            <label>Produto:</label><br>
+            <input type="text" id="produto" placeholder="Ex.: Número Residencial"><br><br>
+            <label>Cor:</label><br>
+            <input type="text" id="cor" placeholder="Ex.: Branco, Preto, Dourado"><br><br>
+            <label>Quantidade:</label><br>
+            <input type="number" id="quantidade" min="1" value="1"><br><br>
+            <label>Informações de Personalização:</label><br>
+            <textarea id="personalizacao" placeholder="Digite os números, nome, frase ou detalhes da placa"></textarea><br><br>
+            <button onclick="enviarWhatsApp()">Enviar Pedido no WhatsApp</button>
+        </section>
+    </main>
+    <footer>
+        <p>WhatsApp: (18) 99646-0668 | Endereço: Rua Bahia 413, Metrópoles, Dracena - SP, CEP 17910-106</p>
+        <p>Instagram: @wzcoreseformas | CNPJ: 53.646.872/0001-98</p>
+    </footer>
+</body>
+</html>
